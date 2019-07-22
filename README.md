@@ -1,2 +1,0 @@
-# rhino
-rhino3dm
