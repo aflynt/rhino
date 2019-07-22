@@ -548,7 +548,8 @@ pybind11::dict BND_ArchivableDictionary::EncodeFromDictionary(pybind11::dict d)
       msg += "\nAllowed value types are bool, int, float, str, Point2d, Point3d, Point4d,";
       msg += "\nVector2d, Vector3d, and GeometryBase.";
       msg += "\nMore types can be supported; just ask.";
-      throw pybind11::cast_error(msg);
+      //throw pybind11::cast_error(msg);
+      throw pybind11::cast_error("DICT ERROR");
     }
 
     if (ItemType::Undefined != it)

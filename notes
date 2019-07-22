@@ -1,0 +1,17 @@
+
+
+/home/flyntga/git/rhino3dm/src/lib/opennurbs/opennurbs_font.cpp:
+
+
+In member function 
+  const ON_Font* ON_ManagedFonts::GetFromFontCharacteristics(const ON_Font&, bool)
+
+
+std::make_unique(...)  is not in C++11
+
+/home/flyntga/git/rhino3dm/src/lib/opennurbs/opennurbs_locale.cpp: In static member function static ON_Locale ON_Locale::FromAppleName(const char*):
+/home/flyntga/git/rhino3dm/src/lib/opennurbs/opennurbs_locale.cpp:1165:57: error: ON_Locale::WindowsLCID is not a class, namespace, or enumeration
+
+## I dont get how that could compile anywhere?? ==> #defines of using clang or visual-c++
+
+
