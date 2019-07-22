@@ -24,18 +24,18 @@ center_pt = rhino3dm.Point3d(0.0, 0.0, 0.0)
 model = rhino3dm.File3dm()
 
 for i in range(num_lines):
-	# Calculate random line end point
-	random.seed(i * 100)
-	theta = random.uniform(theta_min, theta_max)
-	alpha = random.uniform(alpha_min, alpha_max)
-	x = sphere_radius * math.sin(theta) * math.cos(alpha)
-	y = sphere_radius * math.sin(theta) * math.sin(alpha)
-	z = sphere_radius * math.cos(theta)
-	end_pt = rhino3dm.Point3d(x, y, z)
-	# Create line curve
-	line_curve = rhino3dm.LineCurve(center_pt, end_pt)
-	# Add to model
-	model.Objects.AddCurve(line_curve)
+   # Calculate random line end point
+   random.seed(i * 100)
+   theta = random.uniform(theta_min, theta_max)
+   alpha = random.uniform(alpha_min, alpha_max)
+   x = sphere_radius * math.sin(theta) * math.cos(alpha)
+   y = sphere_radius * math.sin(theta) * math.sin(alpha)
+   z = sphere_radius * math.cos(theta)
+   end_pt = rhino3dm.Point3d(x, y, z)
+   # Create line curve
+   line_curve = rhino3dm.LineCurve(center_pt, end_pt)
+   # Add to model
+   model.Objects.AddCurve(line_curve)
 
 # Full path to 3dm file to save
 #desktop = os.path.join(os.path.join(os.environ['USERPROFILE']), 'Desktop') 
