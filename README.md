@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # rhino3dm
 
 [![CircleCI](https://circleci.com/gh/mcneel/rhino3dm/tree/master.svg?style=shield&circle-token=53733a2fe2cf99a11808d1e5210bc1aeb3f13ea9)](https://circleci.com/gh/mcneel/rhino3dm/tree/master)
@@ -66,3 +67,7 @@ See the [documentation on installing and using Rhino3dmIO packages on nuget](htt
 The libraries are still very new and changing rapidly (with the exception of Rhino3dm.NET). Give them a try or get involved.
 
 Up to date technical information can also be found on [Steve Baer's Blog](https://stevebaer.wordpress.com/)
+=======
+# rhino
+rhino3dm
+>>>>>>> b476c7ebbe8f446f1b508ad48ac7640a085b9f61

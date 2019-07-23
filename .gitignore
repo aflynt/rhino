@@ -30,6 +30,7 @@
 *.exe
 *.out
 *.app
+<<<<<<< HEAD
 
 .vscode
 
@@ -71,3 +72,5 @@
 /src/dotnet/Release
 /src/dotnet/bin
 /src/.mypy_cache
+=======
+>>>>>>> b476c7ebbe8f446f1b508ad48ac7640a085b9f61
