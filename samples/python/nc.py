@@ -2,25 +2,31 @@
 import rhino3dm
 import sys
 
+
+# make list of 5 points
+pList = rhino3dm.Point3dList()
+pList.Add(0.0,3,0)
+pList.Add(1.0,3,0)
+pList.Add(2.0,2,0)
+pList.Add(3.0,1,0)
+pList.Add(6.0,1,0)
+
+# create nurbs curve
 is_periodic = False
 degree = 3
-
-pList = rhino3dm.Point3dList()
-
-pList.Add(0,3,0)
-pList.Add(2,3,0)
-pList.Add(3,2,0)
-pList.Add(4,1,0)
-pList.Add(6,1,0)
-
 nc = rhino3dm.NurbsCurve.Create(is_periodic, degree, pList)
 
+# files to write curves to
+fy = open('fy_curve.csv', 'w')
+fz = open('fz_curve.csv', 'w')
 
-
+# Sample the curve to create a lot of points
 for n in range(101):
-  pt = nc.PointAt(2*n/100.0)
-  #print("\nprinting {}".format('1/6th'))
-  print("{} {}".format(n, pt))
+  pt = nc.PointAt(2*n/100.0).Encode()
+
+  #print("{},{},{}".format(pt['X'], pt['Y'], 0.0))
+  fy.write("{},{},{}\n".format(pt['X'], pt['Y'],     0.0))
+  fz.write("{},{},{}\n".format(pt['X'],     0.0, pt['Y']))
 
 
 '''
