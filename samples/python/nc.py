@@ -6,9 +6,9 @@ import sys
 # make list of 5 points
 pList = rhino3dm.Point3dList()
 pList.Add(0.0,3,0)
-pList.Add(1.0,3,0)
-pList.Add(2.0,2,0)
-pList.Add(3.0,1,0)
+pList.Add(3.0,3,0)
+pList.Add(4.0,2,0)
+pList.Add(5.0,1,0)
 pList.Add(6.0,1,0)
 
 # create nurbs curve
